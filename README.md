@@ -1,0 +1,2 @@
+# discordBotNeOS
+wachudoing here
