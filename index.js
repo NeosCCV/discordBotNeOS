@@ -20,11 +20,15 @@ client.on('message', msg => {
     msg.reply('MAO');
   }
   if (lastmsg.indexOf("/math")==0) {
-    msg.reply(lastmsg.length);
-    
-
-
-
+    var result;
+    var operation = lastmsg.slice(6);
+    try{
+    result = eval(operation);
+    }
+    catch(err) {
+      msg.reply("error lmao");
+    }
+    msg.reply(result);
   }
   if (lastmsg.indexOf("/help")==0) {
     msg.reply('first help me and i might help u later');
